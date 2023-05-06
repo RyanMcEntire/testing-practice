@@ -9,7 +9,6 @@ export function reverseString(input) {
   }
   return reversed;
 }
-console.log(reverseString('Ryan'));
 
 export const calculator = {
   add: (n1, n2) => n1 + n2,
