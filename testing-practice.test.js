@@ -3,6 +3,7 @@ import {
   reverseString,
   calculator,
   caesarCipher,
+  analyzeArray
 } from './testing-practice';
 
 test('returns string with first letter capitalized', () => {
@@ -30,3 +31,11 @@ test('returns shifted text', () => {
   expect(caesarCipher('Good. Well done!')).toBe('Weet. Mubb tedu!');
 });
 
+test('returns object with properties from array', () => {
+  expect(analyzeArray([1, 8, 3, 4, 2, 6])).toStrictEqual({
+    average: 4,
+    min: 1,
+    max: 8,
+    length: 6,
+  });
+})

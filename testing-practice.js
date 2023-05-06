@@ -32,10 +32,36 @@ export function caesarCipher(string) {
     } else {
       const isUpperCase = string[i] === string[i].toUpperCase();
       const char = isUpperCase ? string[i].toLowerCase() : string[i];
-      const cipheredIndex = (origin.indexOf(char) + offset + origin.length) % origin.length;
+      const cipheredIndex =
+        (origin.indexOf(char) + offset + origin.length) % origin.length;
       const newChar = origin[cipheredIndex];
       cipherText += isUpperCase ? newChar.toUpperCase() : newChar;
     }
   }
   return cipherText;
+}
+
+function average(arr) {
+  let sum = 0;
+  arr.forEach((item) => {
+    sum += item;
+  });
+  return sum / arr.length;
+}
+
+function min(arr) {
+  return Math.min(...arr);
+}
+
+function max(arr) {
+  return Math.max(...arr);
+}
+
+export function analyzeArray(arr) {
+  return {
+    average: average(arr),
+    min: min(arr),
+    max: max(arr),
+    length: arr.length,
+  };
 }
